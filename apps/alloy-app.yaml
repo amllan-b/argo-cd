@@ -11,9 +11,12 @@ spec:
     repoURL: https://github.com/amllan-b/argo-cd.git
     targetRevision: main
     path: alloy
+    directory:
+      recurse: false
+      include: 'app.yaml'  # Only include app.yaml, ignore values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd  # Creates the Application resource in argocd namespace
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
