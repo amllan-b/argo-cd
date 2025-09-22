@@ -17,7 +17,7 @@ spec:
           - $values/alloy/values.yaml
     
     - repoURL: https://github.com/amllan-b/argo-cd.git
-      targetRevision: HEAD
+      targetRevision: main
       ref: values
   destination:
     server: https://kubernetes.default.svc
