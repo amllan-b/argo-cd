@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/amllan-b/argo-cd.git
-    targetRevision: HEAD
+    targetRevision: main
     path: alloy
   destination:
     server: https://kubernetes.default.svc
