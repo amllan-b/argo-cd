@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: alloy
+  name: alloy-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -13,7 +13,7 @@ spec:
     path: alloy
   destination:
     server: https://kubernetes.default.svc
-    namespace:  alloy
+    namespace: argocd  # Creates the Application resource in argocd namespace
   syncPolicy:
     automated:
       prune: true
